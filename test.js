@@ -21,6 +21,15 @@ describe('ensemble()', function() {
 });
 
 describe('.on', function() {
+  it('should assert argument types', function() {
+    var emitter = ensemble(new Emitter);
+    emitter.on.bind(emitter, 123)
+      .should.throw('ensemble: event should be a string');
+
+    emitter.on.bind(emitter, 'foo', 123)
+      .should.throw('ensemble: callback should be a function');
+  });
+
   it('should save listeners', function() {
     var emitter = ensemble(new Emitter);
 
