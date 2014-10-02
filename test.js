@@ -41,6 +41,13 @@ describe('.on', function() {
   });
 });
 
+describe('.addListener', function() {
+  it('should be an alias to .on', function() {
+    var emitter = ensemble(new Emitter);
+    emitter.on.should.eql(emitter.addListener);
+  });
+});
+
 describe('.removeListeners', function() {
   it('should remove listeners bound to the ctx', function(done) {
     var store = new Emitter;

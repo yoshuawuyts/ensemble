@@ -65,3 +65,9 @@ event.removeListeners = function() {
 
   this._cbs = [];
 }
+
+/**
+ * Aliases.
+ */
+
+event.addListener = event.on;
