@@ -2,6 +2,8 @@
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
+[![Dependency Status][david-image]][david-url]
+[![Downloads][downloads-image]][downloads-url]
 
 Event listener orchestration. Makes it easy to bulk unbind listeners that were
 set withing a context. This is especially useful for unmounting listeners in
@@ -72,3 +74,7 @@ myEmitter.removeListeners();
 [travis-url]: https://travis-ci.org/yoshuawuyts/ensemble
 [coveralls-image]: https://img.shields.io/coveralls/yoshuawuyts/ensemble.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/yoshuawuyts/ensemble?branch=master
+[david-image]: http://img.shields.io/david/yoshuawuyts/ensemble.svg?style=flat-square
+[david-url]: https://david-dm.org/yoshuawuyts/ensemble
+[downloads-image]: http://img.shields.io/npm/dm/ensemble.svg?style=flat-square
+[downloads-url]: https://npmjs.org/package/ensemble
