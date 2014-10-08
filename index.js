@@ -74,7 +74,7 @@ event.removeListeners = function() {
 
 event.once = function() {
   var fn = this._fn;
-  fn.once(arguments);
+  fn.once.apply(fn, arguments);
 }
 
 /**
