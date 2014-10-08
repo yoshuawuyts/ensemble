@@ -50,3 +50,12 @@ describe('.removeListeners', function() {
     store.emit('baz');
   });
 });
+
+describe('delegates', function() {
+  it('should expose `once`', function() {
+    var store = new Emitter;
+    var emitter = ensemble(store);
+
+    emitter.once.should.be.of.type('function');
+  });
+});

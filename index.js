@@ -65,3 +65,14 @@ event.removeListeners = function() {
 
   this._cbs = [];
 }
+
+/**
+ * Expose `once()`.
+ *
+ * @api public
+ */
+
+event.once = function() {
+  var fn = this._fn;
+  fn.once(arguments);
+}
