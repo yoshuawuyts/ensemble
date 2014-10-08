@@ -21,6 +21,15 @@ describe('ensemble()', function() {
 });
 
 describe('.on', function() {
+  it('should assert argument types', function() {
+    var emitter = ensemble(new Emitter);
+    emitter.on.bind(emitter, 123)
+      .should.throw('ensemble: event should be a string');
+
+    emitter.on.bind(emitter, 'foo', 123)
+      .should.throw('ensemble: callback should be a function');
+  });
+
   it('should save listeners', function() {
     var emitter = ensemble(new Emitter);
 
@@ -29,6 +38,13 @@ describe('.on', function() {
 
     emitter._cbs[0].fn().should.eql('foo');
     emitter._cbs[1].fn().should.eql('bar');
+  });
+});
+
+describe('.addListener', function() {
+  it('should be an alias to .on', function() {
+    var emitter = ensemble(new Emitter);
+    emitter.on.should.eql(emitter.addListener);
   });
 });
 

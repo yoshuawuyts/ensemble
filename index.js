@@ -40,8 +40,8 @@ function Event(fn) {
  */
 
 event.on = function(event, cb) {
-  assert('string' == typeof event, 'Event should be a string');
-  assert('function' == typeof cb, 'Callback should be a function');
+  assert.equal(typeof event, 'string', 'ensemble: event should be a string');
+  assert.equal(typeof cb, 'function', 'ensemble: callback should be a function');
 
   var obj = {
     event: event,
@@ -76,3 +76,9 @@ event.once = function() {
   var fn = this._fn;
   fn.once(arguments);
 }
+
+/**
+ * Aliases.
+ */
+
+event.addListener = event.on;
