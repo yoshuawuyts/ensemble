@@ -2,7 +2,6 @@
 [![NPM version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
-[![Dependency Status][david-image]][david-url]
 [![Downloads][downloads-image]][downloads-url]
 
 Event listener orchestration. Makes it easy to bulk unbind listeners that were
@@ -11,7 +10,7 @@ React's `componentWillUnmount` lifecycle event.
 
 ## Installation
 ```bash
-$ npm i --save ensemble
+npm install ensemble
 ```
 
 ## Overview
@@ -65,8 +64,7 @@ myEmitter.removeListeners();
 ```
 
 ## License
-[MIT](https://tldrlegal.com/license/mit-license) ©
-[Yoshua Wuyts](yoshuawuyts.com)
+[MIT](https://tldrlegal.com/license/mit-license)
 
 [npm-image]: https://img.shields.io/npm/v/ensemble.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/ensemble
@@ -74,7 +72,5 @@ myEmitter.removeListeners();
 [travis-url]: https://travis-ci.org/yoshuawuyts/ensemble
 [coveralls-image]: https://img.shields.io/coveralls/yoshuawuyts/ensemble.svg?style=flat-square
 [coveralls-url]: https://coveralls.io/r/yoshuawuyts/ensemble?branch=master
-[david-image]: http://img.shields.io/david/yoshuawuyts/ensemble.svg?style=flat-square
-[david-url]: https://david-dm.org/yoshuawuyts/ensemble
 [downloads-image]: http://img.shields.io/npm/dm/ensemble.svg?style=flat-square
 [downloads-url]: https://npmjs.org/package/ensemble
